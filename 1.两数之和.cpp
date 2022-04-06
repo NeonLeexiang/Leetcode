@@ -8,6 +8,7 @@
 class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
+        // 一遍哈希表方法
         map<int, int>a;
         for (int i = 0; i < nums.size(); i++)
         {
@@ -19,4 +20,3 @@ public:
     }
 };
 // @lc code=end
-
