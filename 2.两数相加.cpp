@@ -18,6 +18,7 @@
 class Solution {
 public:
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        // pay attention to the initial
         ListNode* lst = nullptr;
         ListNode* p = nullptr;
         
@@ -27,10 +28,12 @@ public:
         int n2 = 0;
 
         while (l1 || l2) {
+            // just use l1 l2, since they are parameter
             n1 = l1 ? l1->val: 0;
             n2 = l2 ? l2->val: 0;
             res = n1 + n2 + carry;
             if (!lst) {
+                // need to initialize the head node
                 lst = p = new ListNode(res % 10);
             } else {
                 p->next = new ListNode(res % 10);
