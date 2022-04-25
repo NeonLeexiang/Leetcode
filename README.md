@@ -1,4 +1,50 @@
 # Leetcode 刷题日记
+
+刷题日记基于 🔗[`labuladong 的算法小抄`](https://github.com/labuladong/fucking-algorithm)  
+  
+<br/>
+<br/>
+<br/>
+
+👇 以下是 `labuladong fucking-algorithm` 介绍页面  
+
+---
+
+# labuladong 的算法小抄
+
+<p align='center'>
+<a href="https://labuladong.github.io/algo" target="_blank"><img alt="Website" src="https://img.shields.io/website?label=%E5%9C%A8%E7%BA%BF%E7%94%B5%E5%AD%90%E4%B9%A6&style=flat-square&down_color=blue&down_message=%E7%82%B9%E8%BF%99%E9%87%8C&up_color=blue&up_message=%E7%82%B9%E8%BF%99%E9%87%8C&url=https%3A%2F%2Flabuladong.gitee.io%2Falgo&logo=Gitea"></a>
+<a href="https://github.com/labuladong/fucking-algorithm" target="_blank"><img alt="GitHub" src="https://img.shields.io/github/stars/labuladong/fucking-algorithm?label=Stars&style=flat-square&logo=GitHub"></a>
+</p>
+
+<p align='center'>
+<a href="https://www.github.com/labuladong" target="_blank"><img src="https://img.shields.io/badge/作者-@labuladong-000000.svg?style=flat-square&logo=GitHub"></a>
+<a href="https://www.zhihu.com/people/labuladong" target="_blank"><img src="https://img.shields.io/badge/%E7%9F%A5%E4%B9%8E-@labuladong-000000.svg?style=flat-square&logo=Zhihu"></a>
+<a href="https://i.loli.net/2020/10/10/MhRTyUKfXZOlQYN.jpg" target="_blank"><img src="https://img.shields.io/badge/公众号-@labuladong-000000.svg?style=flat-square&logo=WeChat"></a>
+<a href="https://space.bilibili.com/14089380" target="_blank"><img src="https://img.shields.io/badge/B站-@labuladong-000000.svg?style=flat-square&logo=Bilibili"></a>
+</p>
+
+---
+<br/>
+<br/>
+<br/>
+
+
+---
+
+
+## Log
+
+| date | file | Log|
+| ---- | ---- | ----|
+| 2022-04-25 | [`BaseCode.md`](./BaseCode.md) | 添加 `BaseCode.md` 用于记录一些基础的代码 |
+| 2022-04-25 | `...` | 完成递归链表章节题目 |
+| 2022-04-25 | [`README.md`](./README.md) | 完善 `README` 文档并添加算法小抄介绍以及🔗链接 |
+| 2022-04-25 | `...` | 结束 手把手刷链表算法 小节 |
+
+
+
+
 ---
 
 ## 第一章: 双指针技巧秒杀七道链表题目
@@ -24,5 +70,11 @@
 > 另外，这段代码稍加修改就可以直接用到判断链表成环的算法题上。判断链表是否包含环. 判断链表是否包含环属于经典问题了，解决方案也是用快慢指针：每当慢指针 slow 前进一步，快指针 fast 就前进两步。如果 fast 最终遇到空指针，说明链表中没有环；如果 fast 最终和 slow 相遇，那肯定是 fast 超过了 slow 一圈，说明链表中含有环。
 
 > 如何判断链表中环的起点，可以利用一个思维：当快慢指针相遇时，让其中任一个指针指向头节点，然后让它俩以相同速度前进，再次相遇时所在的节点位置就是环开始的位置。
+  
+* 递归解决反转列表。
+> 1. 递归函数要有 base case 。
+> 2. 别忘了解决边界问题。
 
+**链表是一种兼具递归和迭代性质的数据结构**
+> 必须有一个思维去看待递归问题，首先必须看问题是否能分解为子问题，然后再去找 base case. 可以从边界的角度考虑 base case。
 

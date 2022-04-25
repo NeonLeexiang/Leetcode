@@ -45,4 +45,26 @@ ListNode reverse(ListNode a) {
 }
 ```
 
+对应二叉树的遍历基础代码，链表也有对应的前序遍历和后序遍历  
+
+二叉树的遍历：
+```cpp
+void traverse(TreeNode root) {
+    // 前序遍历代码
+    traverse(root.left);
+    // 中序遍历代码
+    traverse(root.right);
+    // 后序遍历代码
+}
+```
+  
+链表的递归遍历 
+```cpp
+void traverse(ListNode head) {
+    // 前序遍历代码
+    traverse(head.next);
+    // 后序遍历代码
+}
+```
+
 
