@@ -95,4 +95,50 @@ class Difference {
 };
 ```
 
+滑动窗口算法核心框架
+```cpp
+// 滑动窗口算法框架 
+// labuladong 写法
+void slidingWindow(string s, string t) {
+    unordered_map<char, int> need, window;
+    for (char c: t) need[c]++;
+
+    int left = 0, right = 0;
+    int valid = 0;
+
+    while (right < s.size()) {
+        char c = s[right];
+        // 右移（增大）窗口
+        right++;
+        // 进行窗口内数据的一系列更新
+
+        while (window needs shrink) {
+            char d = s[left];
+            // 左移（缩小）窗口
+            left++;
+            // 进行窗口内数据的一系列更新
+        }
+    }
+}
+```
+
+经典数据结构算法-> 二分查找
+```cpp
+int binarySearch(int[] nums, int target) {
+    // 一左一右两个指针相向而行
+    int left =0, right = nums.length - 1;
+    while (left <= right) {
+        int mid = (right + left) / 2;
+        if (nums[mid] == target)
+            return mid;
+        else if (nums[mid] < target)
+            left = mid + 1;
+        else if (nums[mid] > target)
+            right = mid -1;
+    }
+    return -1;
+}
+```
+
+
 
