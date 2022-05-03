@@ -39,6 +39,9 @@
 
 //     }
 // };
+
+// 接下来是标准答案，标准答案的写法具有更多的字符串内置方法
+// 有时候也需要掌握一些内置函数可以更加方便快捷地解决很多问题
 class Solution {
 public:
     bool isPalindrome(string s) {
