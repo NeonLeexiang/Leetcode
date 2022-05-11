@@ -156,3 +156,34 @@ while (right < s.size()) {
 
 > 计算 mid 时需要防止溢出，代码中 left + (right - left) / 2 就和 (left + right) / 2 的结果相同，但是有效防止了 left 和 right 太大，直接相加导致溢出的情况。
 
+* 二分搜索的套路框架
+```cpp
+// 函数 f 是关于自变量 x 的单调函数
+int f(int x) {
+    // ...
+}
+
+// 主函数，在 f(x) == target 的约束下求 x 的最值
+int solution(int[] nums, int target) {
+    if (nums.length == 0) return -1;
+    // 问自己：自变量 x 的最小值是多少？
+    int left = ...;
+    // 问自己：自变量 x 的最大值是多少？
+    int right = ... + 1;
+    
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (f(mid) == target) {
+            // 问自己：题目是求左边界还是右边界？
+            // ...
+        } else if (f(mid) < target) {
+            // 问自己：怎么让 f(x) 大一点？
+            // ...
+        } else if (f(mid) > target) {
+            // 问自己：怎么让 f(x) 小一点？
+            // ...
+        }
+    }
+    return left;
+}
+```

@@ -395,3 +395,25 @@ int left_bound(int[] nums, int target) {
     return left;
 }
 ```
+
+二分查找的边界问题：
+```cpp
+// 搜索左侧边界
+int left_bound(int[] nums, int target) {
+    if (nums.length == 0) return -1;
+    int left = 0, right = nums.length;
+    
+    while (left < right) {
+        int mid = left + (right - left) / 2;
+        if (nums[mid] == target) {
+            // 当找到 target 时，收缩右侧边界
+            right = mid;
+        } else if (nums[mid] < target) {
+            left = mid + 1;
+        } else if (nums[mid] > target) {
+            right = mid;
+        }
+    }
+    return left;
+}
+```
