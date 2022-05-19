@@ -187,3 +187,5 @@ int solution(int[] nums, int target) {
     return left;
 }
 ```
+
+* 优先队列需要专门一个章节去进行了解
